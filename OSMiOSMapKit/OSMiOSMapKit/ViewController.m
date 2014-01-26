@@ -17,6 +17,9 @@
     osmOverlay.canReplaceMapContent = YES;
     
     [_mapView addOverlay:osmOverlay];
+    
+    _mapView.userTrackingMode = MKUserTrackingModeFollow;
+    _mapView.showsUserLocation = YES;
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
