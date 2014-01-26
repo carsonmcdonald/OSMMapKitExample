@@ -5,10 +5,16 @@
 @end
 
 @implementation ViewController
+{
+    CLLocationManager *locationManager;
+    CLLocation *originalLocation;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    originalLocation = nil;
     
     MKTileOverlay *osmOverlay = [[MKTileOverlay alloc] initWithURLTemplate:@"http://c.tile.openstreetmap.org/{z}/{x}/{y}.png"];
     
@@ -20,6 +26,28 @@
     
     _mapView.userTrackingMode = MKUserTrackingModeFollow;
     _mapView.showsUserLocation = YES;
+    
+    // Set up to track location to zoom into the initial location
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    [locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    if(originalLocation == nil && newLocation != nil)
+    {
+        originalLocation = newLocation;
+
+        MKCoordinateRegion region;
+        region.center = originalLocation.coordinate;
+        region.span.latitudeDelta = 0.25;
+        region.span.longitudeDelta = 0.25;
+        [_mapView setRegion:region animated:YES];
+        
+        [locationManager stopUpdatingLocation];
+    }
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
