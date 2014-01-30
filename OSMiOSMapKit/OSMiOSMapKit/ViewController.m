@@ -6,6 +6,7 @@
 
 @implementation ViewController
 {
+    NSDictionary *tileSources;
     CLLocationManager *locationManager;
     CLLocation *originalLocation;
 }
@@ -15,8 +16,10 @@
     [super viewDidLoad];
     
     originalLocation = nil;
+    tileSources = @{@"Open Streetmap Default": @"http://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    @"Map Quest Open Aerial": @"http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg"};
     
-    MKTileOverlay *osmOverlay = [[MKTileOverlay alloc] initWithURLTemplate:@"http://c.tile.openstreetmap.org/{z}/{x}/{y}.png"];
+    MKTileOverlay *osmOverlay = [[MKTileOverlay alloc] initWithURLTemplate:tileSources[@"Open Streetmap Default"]];
     
     // This lets MapKit know that the provided tiles can replace the MapKit provided
     // tiles, when this is set to YES the MapKit tiles will not be rendered.
