@@ -5,4 +5,6 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (strong, nonatomic) NSString *selectedTileSource;
+
 @end

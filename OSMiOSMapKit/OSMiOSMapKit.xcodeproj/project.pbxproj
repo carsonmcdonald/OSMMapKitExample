@@ -18,6 +18,7 @@
 		B61EF6BC18956569009838CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61EF6BB18956569009838CE /* ViewController.m */; };
 		B61EF6BE18956569009838CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B61EF6BD18956569009838CE /* Images.xcassets */; };
 		B61EF6DB18956637009838CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61EF6DA18956637009838CE /* MapKit.framework */; };
+		B61EF76A189D91F1009838CE /* TileSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B61EF769189D91F1009838CE /* TileSelectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		B61EF6BD18956569009838CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B61EF6C418956569009838CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B61EF6DA18956637009838CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B61EF768189D91F1009838CE /* TileSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileSelectionViewController.h; sourceTree = "<group>"; };
+		B61EF769189D91F1009838CE /* TileSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileSelectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				B61EF6B718956569009838CE /* Main_iPad.storyboard */,
 				B61EF6BA18956569009838CE /* ViewController.h */,
 				B61EF6BB18956569009838CE /* ViewController.m */,
+				B61EF768189D91F1009838CE /* TileSelectionViewController.h */,
+				B61EF769189D91F1009838CE /* TileSelectionViewController.m */,
 				B61EF6BD18956569009838CE /* Images.xcassets */,
 				B61EF6A918956569009838CE /* Supporting Files */,
 			);
@@ -179,6 +184,7 @@
 				B61EF6BC18956569009838CE /* ViewController.m in Sources */,
 				B61EF6B318956569009838CE /* AppDelegate.m in Sources */,
 				B61EF6AF18956569009838CE /* main.m in Sources */,
+				B61EF76A189D91F1009838CE /* TileSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
