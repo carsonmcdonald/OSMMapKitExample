@@ -1,11 +1,3 @@
-//
-//  main.m
-//  OSMiOSMapKit
-//
-//  Created by Carson on 1/26/14.
-//  Copyright (c) 2014 Carson McDonald. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
