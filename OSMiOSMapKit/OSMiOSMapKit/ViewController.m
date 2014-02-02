@@ -21,7 +21,8 @@
     
     originalLocation = nil;
     tileSources = @{@"Open Streetmap Default": @"http://c.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    @"Map Quest Open Aerial": @"http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg"};
+                    @"MapQuest Open Aerial": @"http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg",
+                    @"MapQuest OSM": @"http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg"};
     _selectedTileSource = [[tileSources allKeys] firstObject];
     
     [self configureMap];
